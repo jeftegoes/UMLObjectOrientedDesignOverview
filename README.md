@@ -12,12 +12,26 @@
     - [1.2.3. Advantages](#123-advantages)
     - [1.2.4. Differences](#124-differences)
   - [1.3. Waterfall or Agile?](#13-waterfall-or-agile)
-- [2. Diagrams](#2-diagrams)
-  - [2.1. Use Case](#21-use-case)
+- [2. Core object orientation concepts](#2-core-object-orientation-concepts)
+  - [2.1. Objects](#21-objects)
   - [2.2. Class](#22-class)
-  - [2.3. Sequence](#23-sequence)
-  - [2.4. Activity](#24-activity)
-  - [2.5. Statechart](#25-statechart)
+  - [2.3. Abstraction](#23-abstraction)
+  - [2.4. Encapsulation](#24-encapsulation)
+  - [2.5. Inheritance](#25-inheritance)
+  - [2.6. Polymorphism](#26-polymorphism)
+  - [2.7. More about](#27-more-about)
+- [3. Object oriented analysis and design](#3-object-oriented-analysis-and-design)
+  - [3.1. Collect the requirements](#31-collect-the-requirements)
+  - [3.2. Description of the software system](#32-description-of-the-software-system)
+  - [3.3. Identify the things that form our system](#33-identify-the-things-that-form-our-system)
+  - [3.4. Describe the behavior of our system](#34-describe-the-behavior-of-our-system)
+- [4. Diagrams](#4-diagrams)
+  - [4.1. What's UML?](#41-whats-uml)
+  - [4.2. Use Case](#42-use-case)
+  - [4.3. Class](#43-class)
+  - [4.4. Sequence](#44-sequence)
+  - [4.5. Activity](#45-activity)
+  - [4.6. Statechart](#46-statechart)
 
 # 1. What are Software Development Methodologies?
 
@@ -161,14 +175,106 @@
 - **Waterfall** is best suited for projects with clear requirements and fixed scope.
 - Choose **Agile** if requiriments are unstable and may change frequently.
 
-# 2. Diagrams
+# 2. Core object orientation concepts
 
-## 2.1. Use Case
+## 2.1. Objects
+
+- While structured programming relies on actions, object oriented programming is organized around objects.
+- An object represents a thing. Just like in real life, objects can be simple or complex.
 
 ## 2.2. Class
 
-## 2.3. Sequence
+- Building an object oriented system starts by identifying the potential objects, their attributes, and responsibilities. We need to have a class before we can create an object.
+- **The class is the blueprint of an object.**
+- You can think of a class as a plan, a description of what an object will be.
+- An object is a realization of this blueprint.
 
-## 2.4. Activity
+## 2.3. Abstraction
 
-## 2.5. Statechart
+- Abstraction is a way of describing complex problems in simple terms, by ignoring some details.
+- Eliminating the nitty-gritty details let us focus on the bigger picture.
+- We can dig deeper once we have a broader understanding.
+
+## 2.4. Encapsulation
+
+- The next fundamental idea to keep in mind when dealing with OOP and classes is called encapsulation.
+- We encapsulate something to protect it and keep its parts together.
+
+## 2.5. Inheritance
+
+- Inheritance is a key concept in object oriented programming.
+- Without inheritance, we'd end up writing similar code over and over again.
+- Inheritance means code reuse.
+  - That is, reusing an existing class implementation in new classes.
+
+## 2.6. Polymorphism
+
+- Polymorphism is about working freely with instances of many different classes that share a common superclass.
+
+## 2.7. More about
+
+[C# Intermediate Classes, Interfaces and OOP](https://github.com/jeftegoes/CSharpIntermediateClassesInterfacesOOP)
+
+# 3. Object oriented analysis and design
+
+- Building an object-oriented application requires some preliminary steps.
+
+## 3.1. Collect the requirements
+
+- We answer the following questions:
+  - What's the problem we're trying to solve?
+  - What does our app or framework need to do to accomplish that functionality?
+
+## 3.2. Description of the software system
+
+- We should describe the app from the user's perspective.
+- This step of describing the app may include the creation of visual mockups, wireframes or even prototypes.
+- If it helps in communicating your thoughts to the client, then do it.
+
+## 3.3. Identify the things that form our system
+
+- Picking the essential entities won't be challenging if we did a good job at the previous two steps.
+- We'll realize that we need a class that represents say an item that has a name, a price, and some other attributes; or a class responsible for securely communicating with a server.
+- Another class may manage your local persistence, and so on.
+
+## 3.4. Describe the behavior of our system
+
+- This last step is about creating visual representations of our classes, their attributes and behavior.
+- We also model the interaction between the objects.
+
+# 4. Diagrams
+
+- Understanding a software system just by looking at its source code can be very time-consuming.
+- And communicating ideas about software design or business processes is even harder if there's no commonly accepted way to do it.
+
+## 4.1. What's UML?
+
+- The Unified Modeling Language - in short UML - was introduced to solve this problem.
+- UML is not a textual programming language, but rather a graphical notation; a set of diagrams that help in designing and communicating software systems.
+- We can use these diagrams to describe the objects that form a system and their interactions.
+- UML has many diagram types: Use case, Class, Sequence, Activity, Statechart most common.
+
+## 4.2. Use Case
+
+- Its purpose is to visualize the functional requirements of the system.
+- Use-case diagrams show groups of related use-cases.
+- Sometimes they may include all the use-cases.
+
+## 4.3. Class
+
+- Without any doubt, class diagrams are the most frequently used UML diagram types.
+- After identifying the entities that form our system, we start creating class diagrams for each of them.
+
+## 4.4. Sequence
+
+- UML provides dynamic diagrams to represent how objects communicate with each other.
+- The most common dynamic diagram is the sequence diagram.
+- We use the sequence diagram to describe the flow of logic in one particular scenario.
+
+## 4.5. Activity
+
+- Activity diagrams can be used to describe workflows.
+
+## 4.6. Statechart
+
+- The Statechart or State Machine diagram models how an object transitions from one state to another over its lifetime.
